@@ -1,0 +1,10 @@
+-   hosts: localhost
+    user: tomas
+    connection: local
+    tasks:
+        -   name: Install VIM
+            homebrew: name={{ item }} state=present
+            with_items:
+            -   vim
+            -   git
+            -   wget
